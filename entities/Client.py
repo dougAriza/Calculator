@@ -21,5 +21,5 @@ class Client:
 
     def efficiency(self) -> float:
         totalBlisters = self.__stepBlisters * (self.__finalCycle - self.__startCycle)
-        return (totalBlisters - self.__fails) / totalBlisters * 100
+        return round((totalBlisters - self.__fails) / totalBlisters * 100, 2)
 
