@@ -191,12 +191,14 @@ class Ui_MainWindow(object):
         self.calcule_pushButton.setText(_translate("MainWindow", "Calcule"))
         self.label.setText(_translate("MainWindow", "Result"))
 
+    def __init__(self) -> None:
+        pass
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
-    ui.setupUi(MainWindow)
-    MainWindow.show()
-    sys.exit(app.exec_())
+    def showPage(self):
+        import sys
+        app = QtWidgets.QApplication(sys.argv)
+        MainWindow = QtWidgets.QMainWindow()
+        ui = Ui_MainWindow()
+        ui.setupUi(MainWindow)
+        MainWindow.show()
+        sys.exit(app.exec_())
