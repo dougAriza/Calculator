@@ -51,19 +51,19 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.startCycle_lineEdit.setFont(font)
         self.startCycle_lineEdit.setStyleSheet("QLineEdit {\n"
-"    background-color: rgb(30, 30, 30);    \n"
-"    border: 2px solid rgb(45, 45, 45);\n"
-"    padding-left: 15px;\n"
-"    border-radius: 5px;\n"
-"}\n"
-"QLineEdit:hover {\n"
-"    background-color: rgb(35, 35, 35);    \n"
-"    border: 2px solid rgb(60, 60, 60);\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    background-color: rgb(45, 45, 45);    \n"
-"    border: 2px solid rgb(255, 241, 32);\n"
-"}")
+        "    background-color: rgb(30, 30, 30);    \n"
+        "    border: 2px solid rgb(45, 45, 45);\n"
+        "    padding-left: 15px;\n"
+        "    border-radius: 5px;\n"
+        "}\n"
+        "QLineEdit:hover {\n"
+        "    background-color: rgb(35, 35, 35);    \n"
+        "    border: 2px solid rgb(60, 60, 60);\n"
+        "}\n"
+        "QLineEdit:focus {\n"
+        "    background-color: rgb(45, 45, 45);    \n"
+        "    border: 2px solid rgb(255, 241, 32);\n"
+        "}")
         self.startCycle_lineEdit.setObjectName("startCycle_lineEdit")
         self.finalCycle_lineEdit = QtWidgets.QLineEdit(self.info_frame)
         self.finalCycle_lineEdit.setGeometry(QtCore.QRect(75, 140, 200, 40))
@@ -72,19 +72,19 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.finalCycle_lineEdit.setFont(font)
         self.finalCycle_lineEdit.setStyleSheet("QLineEdit {\n"
-"    background-color: rgb(30, 30, 30);    \n"
-"    border: 2px solid rgb(45, 45, 45);\n"
-"    padding-left: 15px;\n"
-"    border-radius: 5px;\n"
-"}\n"
-"QLineEdit:hover {\n"
-"    background-color: rgb(35, 35, 35);    \n"
-"    border: 2px solid rgb(60, 60, 60);\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    background-color: rgb(45, 45, 45);    \n"
-"    border: 2px solid rgb(255, 241, 32);\n"
-"}")
+        "    background-color: rgb(30, 30, 30);    \n"
+        "    border: 2px solid rgb(45, 45, 45);\n"
+        "    padding-left: 15px;\n"
+        "    border-radius: 5px;\n"
+        "}\n"
+        "QLineEdit:hover {\n"
+        "    background-color: rgb(35, 35, 35);    \n"
+        "    border: 2px solid rgb(60, 60, 60);\n"
+        "}\n"
+        "QLineEdit:focus {\n"
+        "    background-color: rgb(45, 45, 45);    \n"
+        "    border: 2px solid rgb(255, 241, 32);\n"
+        "}")
         self.finalCycle_lineEdit.setObjectName("finalCycle_lineEdit")
         self.company_lineEdit = QtWidgets.QLineEdit(self.info_frame)
         self.company_lineEdit.setGeometry(QtCore.QRect(75, 14, 200, 40))
@@ -93,19 +93,19 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.company_lineEdit.setFont(font)
         self.company_lineEdit.setStyleSheet("QLineEdit {\n"
-"    background-color: rgb(30, 30, 30);    \n"
-"    border: 2px solid rgb(45, 45, 45);\n"
-"    padding-left: 15px;\n"
-"    border-radius: 5px;\n"
-"}\n"
-"QLineEdit:hover {\n"
-"    background-color: rgb(35, 35, 35);    \n"
-"    border: 2px solid rgb(60, 60, 60);\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    background-color: rgb(45, 45, 45);    \n"
-"    border: 2px solid rgb(255, 241, 32);\n"
-"}")
+        "    background-color: rgb(30, 30, 30);    \n"
+        "    border: 2px solid rgb(45, 45, 45);\n"
+        "    padding-left: 15px;\n"
+        "    border-radius: 5px;\n"
+        "}\n"
+        "QLineEdit:hover {\n"
+        "    background-color: rgb(35, 35, 35);    \n"
+        "    border: 2px solid rgb(60, 60, 60);\n"
+        "}\n"
+        "QLineEdit:focus {\n"
+        "    background-color: rgb(45, 45, 45);    \n"
+        "    border: 2px solid rgb(255, 241, 32);\n"
+        "}")
         self.company_lineEdit.setObjectName("company_lineEdit")
         self.product_lineEdit = QtWidgets.QLineEdit(self.info_frame)
         self.product_lineEdit.setGeometry(QtCore.QRect(75, 56, 200, 40))
@@ -114,19 +114,19 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.product_lineEdit.setFont(font)
         self.product_lineEdit.setStyleSheet("QLineEdit {\n"
-"    background-color: rgb(30, 30, 30);    \n"
-"    border: 2px solid rgb(45, 45, 45);\n"
-"    padding-left: 15px;\n"
-"    border-radius: 5px;\n"
-"}\n"
-"QLineEdit:hover {\n"
-"    background-color: rgb(35, 35, 35);    \n"
-"    border: 2px solid rgb(60, 60, 60);\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    background-color: rgb(45, 45, 45);    \n"
-"    border: 2px solid rgb(255, 241, 32);\n"
-"}")
+        "    background-color: rgb(30, 30, 30);    \n"
+        "    border: 2px solid rgb(45, 45, 45);\n"
+        "    padding-left: 15px;\n"
+        "    border-radius: 5px;\n"
+        "}\n"
+        "QLineEdit:hover {\n"
+        "    background-color: rgb(35, 35, 35);    \n"
+        "    border: 2px solid rgb(60, 60, 60);\n"
+        "}\n"
+        "QLineEdit:focus {\n"
+        "    background-color: rgb(45, 45, 45);    \n"
+        "    border: 2px solid rgb(255, 241, 32);\n"
+        "}")
         self.product_lineEdit.setObjectName("product_lineEdit")
         self.calcule_pushButton = QtWidgets.QPushButton(self.info_frame)
         self.calcule_pushButton.setGeometry(QtCore.QRect(120, 210, 110, 40))
@@ -137,21 +137,21 @@ class Ui_MainWindow(object):
         font.setWeight(75)
         self.calcule_pushButton.setFont(font)
         self.calcule_pushButton.setStyleSheet("QPushButton {\n"
-"    background-color: rgb(130, 130, 130);\n"
-"    border: 1px solid rgb(95, 95, 95);\n"
-"    border-radius: 5px;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: rgb(140, 140, 140);\n"
-"    border: 1px solid rgb(115, 115, 115);\n"
-"}\n"
-"QPushButton:pressed {\n"
-"    background-color: rgb(255, 241, 32);\n"
-"    \n"
-"    color: rgb(255, 0, 0);\n"
-"    border: 1px solid rgb(120, 120, 120);\n"
-"}\n"
-"")
+        "    background-color: rgb(130, 130, 130);\n"
+        "    border: 1px solid rgb(95, 95, 95);\n"
+        "    border-radius: 5px;\n"
+        "}\n"
+        "QPushButton:hover {\n"
+        "    background-color: rgb(140, 140, 140);\n"
+        "    border: 1px solid rgb(115, 115, 115);\n"
+        "}\n"
+        "QPushButton:pressed {\n"
+        "    background-color: rgb(255, 241, 32);\n"
+        "    \n"
+        "    color: rgb(255, 0, 0);\n"
+        "    border: 1px solid rgb(120, 120, 120);\n"
+        "}\n"
+        "")
         self.calcule_pushButton.setObjectName("calcule_pushButton")
         self.horizontalLayout.addWidget(self.info_frame)
         self.verticalLayout.addWidget(self.content)
@@ -171,7 +171,7 @@ class Ui_MainWindow(object):
         font.setPointSize(12)
         self.label.setFont(font)
         self.label.setStyleSheet("background-color: rgb(255, 0, 0);\n"
-"border-radius: 5px")
+        "border-radius: 5px")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout_2.addWidget(self.label)
@@ -180,6 +180,12 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+        #INITIAL SETTINGS
+        self.company_lineEdit.setFocus()
+        self.label.hide()
+
+        #FUNCTIONS
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
