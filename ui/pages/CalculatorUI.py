@@ -30,7 +30,7 @@ class Ui_MainWindow(object):
                 message = "Company is empty!"
                 flagMessage = True
         if product == "":
-                message += " Product is empty!"
+                message += " Product is empty!\n"
                 flagMessage = True
         if self.startCycle_lineEdit.text() == "":
                 message += " Start cycle is empty!"
@@ -47,7 +47,10 @@ class Ui_MainWindow(object):
                 flagMessage = True
         else:
                 try:
-                        finalCycle = int(self.startCycle_lineEdit.text())
+                        finalCycle = int(self.finalCycle_lineEdit.text())
+                        if finalCycle < startCycle:
+                                flagMessage = True
+                                message += "Final cycle is smaller than start cycle!"
                 except:
                         message += " Final cycle is not a number!"
                         self.finalCycle_lineEdit.setText("")
