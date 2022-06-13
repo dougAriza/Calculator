@@ -21,6 +21,8 @@ class Ui_MainWindow(object):
         startCycle:int
         finalCycle:int
         message = ""
+        tablets:int
+        fails:int
         flagMessage = False
 
         company = self.company_lineEdit.text()
@@ -55,14 +57,34 @@ class Ui_MainWindow(object):
                         message += " Final cycle is not a number!"
                         self.finalCycle_lineEdit.setText("")
                         flagMessage = True
+        if self.tablets_lineEdit.text() == "":
+                message += " Tablets is empty!"
+                flagMessage = True
+        else:
+                try:
+                        tablets = int(self.tablets_lineEdit.text())
+                except:
+                        message += "\nTablets is not a number!"
+                        self.tablets_lineEdit.setText("")
+                        flagMessage = True
+        if self.fails_lineEdit.text() == "":
+                message += " Fails is empty!"
+                flagMessage = True
+        else:
+                try:
+                        fails = int(self.fails_lineEdit.text())
+                except:
+                        message += " Fails is not a number!"
+                        self.fails_lineEdit.setText("")
+                        flagMessage = True
                 
         if flagMessage:
                 self.label.show()
                 self.label.setText(message)
                 self.label.setStyleSheet("background-color: rgb(255, 0, 0);")
         else:
-                result = (finalCycle - startCycle) 
-                message = "There was " + str(result) + " cycle!"
+                result = float((finalCycle - startCycle) * tablets - fails) / ((finalCycle - startCycle) * tablets) * 100
+                message = "The " + product + " got " + str(result) + "% of efficience!"
                 self.label.setStyleSheet("background-color: rgb(0, 128, 0);")
                 self.label.show()
                 self.label.setText(message)
@@ -93,7 +115,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.info_frame = QtWidgets.QFrame(self.content)
-        self.info_frame.setMaximumSize(QtCore.QSize(350, 300))
+        self.info_frame.setMaximumSize(QtCore.QSize(350, 350))
         self.info_frame.setStyleSheet("background-color: rgb(15, 15, 15); ")
         self.info_frame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.info_frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -166,6 +188,32 @@ class Ui_MainWindow(object):
         self.tablets_lineEdit.setObjectName("tablets_lineEdit")
 
         ##############################################################
+
+        ##############################################################
+        self.fails_lineEdit = QtWidgets.QLineEdit(self.info_frame)
+        self.fails_lineEdit.setGeometry(QtCore.QRect(75, 224, 200, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        self.fails_lineEdit.setFont(font)
+        self.fails_lineEdit.setStyleSheet("QLineEdit {\n"
+        "    background-color: rgb(30, 30, 30);    \n"
+        "    border: 2px solid rgb(45, 45, 45);\n"
+        "    padding-left: 15px;\n"
+        "    border-radius: 5px;\n"
+        "}\n"
+        "QLineEdit:hover {\n"
+        "    background-color: rgb(35, 35, 35);    \n"
+        "    border: 2px solid rgb(60, 60, 60);\n"
+        "}\n"
+        "QLineEdit:focus {\n"
+        "    background-color: rgb(45, 45, 45);    \n"
+        "    border: 2px solid rgb(255, 241, 32);\n"
+        "}")
+        self.fails_lineEdit.setObjectName("fails_lineEdit")
+
+        ##############################################################
+
         self.company_lineEdit = QtWidgets.QLineEdit(self.info_frame)
         self.company_lineEdit.setGeometry(QtCore.QRect(75, 14, 200, 40))
         font = QtGui.QFont()
@@ -209,7 +257,7 @@ class Ui_MainWindow(object):
         "}")
         self.product_lineEdit.setObjectName("product_lineEdit")
         self.calcule_pushButton = QtWidgets.QPushButton(self.info_frame)
-        self.calcule_pushButton.setGeometry(QtCore.QRect(120, 250, 110, 40))
+        self.calcule_pushButton.setGeometry(QtCore.QRect(120, 280, 110, 40))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(11)
@@ -236,7 +284,7 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.info_frame)
         self.verticalLayout.addWidget(self.content)
         self.result_frame = QtWidgets.QFrame(self.centralwidget)
-        self.result_frame.setMaximumSize(QtCore.QSize(16777215, 75))
+        self.result_frame.setMaximumSize(QtCore.QSize(16777215, 85))
         self.result_frame.setStyleSheet("background-color: rgb(15, 15, 15); ")
         self.result_frame.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.result_frame.setFrameShadow(QtWidgets.QFrame.Raised)
@@ -245,7 +293,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.result_frame)
         self.verticalLayout_2.setObjectName("verticalLayout_2")
         self.label = QtWidgets.QLabel(self.result_frame)
-        self.label.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.label.setMaximumSize(QtCore.QSize(16777215, 85))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(12)
@@ -274,6 +322,7 @@ class Ui_MainWindow(object):
         self.startCycle_lineEdit.setPlaceholderText(_translate("MainWindow", "START CYCLE"))
         self.finalCycle_lineEdit.setPlaceholderText(_translate("MainWindow", "FINAL CYCLE"))
         self.tablets_lineEdit.setPlaceholderText(_translate("MainWindow", "TABLETS PER STEP"))
+        self.fails_lineEdit.setPlaceholderText(_translate("MainWindow", "FAILS"))
         self.company_lineEdit.setPlaceholderText(_translate("MainWindow", "COMPANY"))
         self.product_lineEdit.setPlaceholderText(_translate("MainWindow", "PRODUCT"))
         self.calcule_pushButton.setText(_translate("MainWindow", "Calcule"))
