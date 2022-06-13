@@ -59,6 +59,13 @@ class Ui_MainWindow(object):
         if flagMessage:
                 self.label.show()
                 self.label.setText(message)
+                self.label.setStyleSheet("background-color: rgb(255, 0, 0);")
+        else:
+                result = (finalCycle - startCycle) 
+                message = "There was " + str(result) + " cycle!"
+                self.label.setStyleSheet("background-color: rgb(0, 128, 0);")
+                self.label.show()
+                self.label.setText(message)
                 
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -134,6 +141,31 @@ class Ui_MainWindow(object):
         "    border: 2px solid rgb(255, 241, 32);\n"
         "}")
         self.finalCycle_lineEdit.setObjectName("finalCycle_lineEdit")
+
+        ##############################################################
+        self.tablets_lineEdit = QtWidgets.QLineEdit(self.info_frame)
+        self.tablets_lineEdit.setGeometry(QtCore.QRect(75, 182, 200, 40))
+        font = QtGui.QFont()
+        font.setFamily("Segoe UI")
+        font.setPointSize(10)
+        self.tablets_lineEdit.setFont(font)
+        self.tablets_lineEdit.setStyleSheet("QLineEdit {\n"
+        "    background-color: rgb(30, 30, 30);    \n"
+        "    border: 2px solid rgb(45, 45, 45);\n"
+        "    padding-left: 15px;\n"
+        "    border-radius: 5px;\n"
+        "}\n"
+        "QLineEdit:hover {\n"
+        "    background-color: rgb(35, 35, 35);    \n"
+        "    border: 2px solid rgb(60, 60, 60);\n"
+        "}\n"
+        "QLineEdit:focus {\n"
+        "    background-color: rgb(45, 45, 45);    \n"
+        "    border: 2px solid rgb(255, 241, 32);\n"
+        "}")
+        self.tablets_lineEdit.setObjectName("tablets_lineEdit")
+
+        ##############################################################
         self.company_lineEdit = QtWidgets.QLineEdit(self.info_frame)
         self.company_lineEdit.setGeometry(QtCore.QRect(75, 14, 200, 40))
         font = QtGui.QFont()
@@ -177,7 +209,7 @@ class Ui_MainWindow(object):
         "}")
         self.product_lineEdit.setObjectName("product_lineEdit")
         self.calcule_pushButton = QtWidgets.QPushButton(self.info_frame)
-        self.calcule_pushButton.setGeometry(QtCore.QRect(120, 210, 110, 40))
+        self.calcule_pushButton.setGeometry(QtCore.QRect(120, 250, 110, 40))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
         font.setPointSize(11)
@@ -241,6 +273,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.startCycle_lineEdit.setPlaceholderText(_translate("MainWindow", "START CYCLE"))
         self.finalCycle_lineEdit.setPlaceholderText(_translate("MainWindow", "FINAL CYCLE"))
+        self.tablets_lineEdit.setPlaceholderText(_translate("MainWindow", "TABLETS PER STEP"))
         self.company_lineEdit.setPlaceholderText(_translate("MainWindow", "COMPANY"))
         self.product_lineEdit.setPlaceholderText(_translate("MainWindow", "PRODUCT"))
         self.calcule_pushButton.setText(_translate("MainWindow", "Calcule"))
